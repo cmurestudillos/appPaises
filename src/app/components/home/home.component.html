@@ -1,0 +1,27 @@
+<div class="accordion" id="accordionExample">
+    <div *ngFor="let pais of paises; index as i">
+        <div id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn cloudy-knoxville-gradient w-25" type="button" data-toggle="collapse" [attr.data-target]=" '#detalle' + i " aria-expanded="true" [attr.aria-controls]=" '#detalle' + i ">{{pais.name}}</button>
+                <img [src]="pais.flag" class="float-right rounded-circle shadow border " [title]="pais.name" width="65" height="65">
+            </h2>
+            <hr>
+        </div>
+
+        <div [attr.id]=" 'detalle' + i " class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <strong>Capital: </strong><span class="badge badge-pill badge-success"><i class="fas fa-city" aria-hidden="true"></i>  {{pais.capital}}</span>
+                    </div>
+                    <div class="col">
+                        <strong>Poblacion: </strong><span class="badge badge-pill badge-primary"><i class="fas fa-users" aria-hidden="true"></i> {{pais.population | number}}</span>
+                    </div>
+                    <div class="col">
+                        <strong>Subregion: </strong><span class="badge badge-pill badge-warning"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>  {{pais.subregion}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
