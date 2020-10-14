@@ -1,4 +1,4 @@
-# AppPaises
+# paisesAngular
 
 Aplicacion web de paises realizada con Angular, Material Design Bootstrap 4 utilizando la API [Rest Countries](http://restcountries.eu/).
 
